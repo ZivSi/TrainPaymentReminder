@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintBottom_toBottomOf="@id/locationTextView"
+                app:layout_constraintEnd_toStartOf="@id/locationTextView"
+                app:layout_constraintTop_toTopOf="@id/locationTextView"
+                app:tint="@color/purple_700" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your location"
+                android:textColor="@color/purple_700"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="400dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/strokeColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationTextView" />
+
+            <ImageView
+                android:id="@+id/coordinatesImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_my_location_24"
+                app:layout_constraintBottom_toBottomOf="@id/coordinatesTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/coordinatesTextView"
+                app:tint="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/coordinatesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="2"
+                android:text="Coordinates:"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/coordinatesImageView"
+                app:layout_constraintTop_toBottomOf="@id/locationTextView" />
+
+            <ImageView
+                android:id="@+id/addressImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_home_24"
+                app:layout_constraintBottom_toBottomOf="@id/addressTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/addressTextView"
+                app:tint="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/addressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="2"
+                android:text="Address:"
+                android:textColor="@color/purple_500"
+
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/addressImageView"
+                app:layout_constraintTop_toBottomOf="@id/coordinatesTextView" />
+
+            <ImageView
+                android:id="@+id/closestStationImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/signboard"
+                app:layout_constraintBottom_toBottomOf="@id/closestStationTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/closestStationTextView"
+                app:tint="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/closestStationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="2"
+                android:text="Closest Station:"
+
+                android:textColor="@color/purple_500"
+
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/closestStationImageView"
+                app:layout_constraintTop_toBottomOf="@id/addressTextView" />
+
+            <ImageView
+                android:id="@+id/velocityImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_speed_24"
+                app:layout_constraintBottom_toBottomOf="@id/velocityTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/velocityTextView"
+                app:tint="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/velocityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:maxLines="1"
+                android:text="Velocity:"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/velocityImageView"
+                app:layout_constraintTop_toBottomOf="@id/closestStationTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/alertSettingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alert Settings"
+                android:textColor="@color/purple_700"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/notificationSwitch"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:thumb="@drawable/notification_thumb_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alertSettingsTextView" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/vibrateSwitch"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Vibrate"
+                android:thumb="@drawable/vibrate_thumb_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notificationSwitch" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/popupSwitch"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Popup Notification"
+                android:textSize="12sp"
+                android:thumb="@drawable/popup_thumb_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vibrateSwitch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
